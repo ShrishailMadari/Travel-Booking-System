@@ -2,9 +2,16 @@ package com.shyloostyle.userservice.model;
 
 
 import com.shyloostyle.userservice.enums.UserRole;
-import jakarta.persistence.*;
-import lombok.*;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 
 @Getter
@@ -14,9 +21,8 @@ import org.springframework.data.annotation.Id;
 @AllArgsConstructor
 
 @Entity
-public class UserModel {
+public class User {
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;  // Mandatory field
 

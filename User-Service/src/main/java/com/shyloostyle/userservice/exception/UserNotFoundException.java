@@ -1,4 +1,7 @@
 package com.shyloostyle.userservice.exception;
 
-public class UserNotFoundException {
+public class UserNotFoundException extends RuntimeException {
+    public UserNotFoundException(String string) {
+        super(string);
+    }
 }

@@ -1,4 +1,5 @@
 package com.shyloostyle.userservice.enums;
 
-public class UserRole {
+public enum UserRole {
+    USER, ADMIN, MODERATOR;
 }
