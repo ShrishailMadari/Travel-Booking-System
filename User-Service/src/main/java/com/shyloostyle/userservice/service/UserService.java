@@ -1,7 +1,10 @@
 package com.shyloostyle.userservice.service;
 
+import com.shyloostyle.userservice.dto.UserRegisterDTO;
 import com.shyloostyle.userservice.dto.UserRequestDTO;
 import com.shyloostyle.userservice.dto.UserResponseDTO;
+
+import java.util.List;
 
 /*
 HTTP Method | URL | Description
@@ -16,17 +19,20 @@ DELETE | /api/users/{userId} | Soft delete / deactivate a user
 public interface UserService {
     UserResponseDTO getUserById(Long id);
 
-    UserResponseDTO getUserByEmail(String email);
+    UserResponseDTO getUserByEmailId(String emailId);
 
-    UserResponseDTO registerUser(UserRequestDTO userRequestDTO);
+    UserResponseDTO registerUser(UserRegisterDTO userRegisterDTO);
 
     UserResponseDTO updateUser(Long id, UserRequestDTO userRequestDTO);
 
-    UserResponseDTO deleteUser(Long id);
+    String deleteUser(Long id);
 
     UserResponseDTO updatePartialUserDetails(Long id, UserRequestDTO userRequestDTO);
 
     UserResponseDTO getUserByFirstNameAndLastName(String firstName, String lastName);
+
+    List<UserResponseDTO> getAllUsers(); // Pagination and sorting
+
 
 
 }

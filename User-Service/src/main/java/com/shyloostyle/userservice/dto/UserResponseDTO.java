@@ -1,7 +1,11 @@
 package com.shyloostyle.userservice.dto;
 
 import com.shyloostyle.userservice.enums.UserRole;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 public class UserResponseDTO {
 
     private Long id;  // Automatically generated, return it
